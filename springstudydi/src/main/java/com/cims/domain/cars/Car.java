@@ -15,7 +15,7 @@ public interface Car {
      * 返回汽车名字
      * @return String
      */
-    abstract  String getCarname();
+    String getCarname();
 
 
 }
