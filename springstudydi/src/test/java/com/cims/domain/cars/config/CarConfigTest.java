@@ -20,6 +20,6 @@ public class CarConfigTest {
     private Car car = (Car) applicationContext.getBean(Audi.class,"测试");
     @Test
     public void testCarConfig() {
-        Assert.assertEquals("我的id是:audi",car.getCarname());
+        Assert.assertEquals("我的id是:测试",car.getCarname());
     }
 }

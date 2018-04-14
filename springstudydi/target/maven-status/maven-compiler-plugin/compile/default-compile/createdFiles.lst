@@ -1,0 +1,5 @@
+com\cims\domain\cars\Car.class
+com\cims\domain\cars\impl\Audi.class
+com\cims\domain\cars\config\CarConfig.class
+com\cims\domain\cars\impl\BMW.class
+com\cims\domain\cars\impl\MarkCarConfig.class
