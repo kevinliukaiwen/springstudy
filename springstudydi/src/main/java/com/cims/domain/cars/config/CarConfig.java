@@ -5,10 +5,9 @@ import com.cims.domain.cars.impl.Audi;
 import com.cims.domain.cars.impl.BMW;
 import com.cims.domain.cars.impl.MarkCarConfig;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.*;
+import org.springframework.core.env.Environment;
 
 /**
  * @Author kwliu
@@ -18,6 +17,16 @@ import org.springframework.context.annotation.Scope;
  */
 @Configuration
 @ComponentScan(basePackageClasses = MarkCarConfig.class)
+@PropertySource("classpath:app.properties")
 public class CarConfig {
 
+    @Autowired
+    private Environment env;
+
+
+//    @Bean(name="getAudiFromProperrty")
+//    public Car getAudi() {
+//        String id = env.getProperty("audiId");
+//        return new Audi(id);
+//    }
 }

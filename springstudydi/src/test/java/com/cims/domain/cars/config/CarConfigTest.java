@@ -4,6 +4,7 @@ import com.cims.domain.cars.Car;
 import com.cims.domain.cars.impl.Audi;
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -17,9 +18,14 @@ public class CarConfigTest {
 
     ApplicationContext applicationContext = new AnnotationConfigApplicationContext(CarConfig.class);
 
-    private Car car = (Car) applicationContext.getBean(Audi.class,"测试");
+    private Car car = (Car) applicationContext.getBean(Audi.class);
+
+    @Test
+    public void testCarNotNull() {
+        Assert.assertNotNull(car);
+    }
     @Test
     public void testCarConfig() {
-        Assert.assertEquals("我的id是:测试",car.getCarname());
+        Assert.assertEquals("我的id是:audiproperty",car.getCarname());
     }
 }

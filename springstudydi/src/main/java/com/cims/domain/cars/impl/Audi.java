@@ -2,6 +2,8 @@ package com.cims.domain.cars.impl;
 
 import com.cims.domain.cars.Car;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -26,7 +28,7 @@ public class Audi implements Car {
         return "我的id是:" + id;
     }
 
-    public Audi(String id) {
+    public Audi(@Value("${audiId}") String id) {
         this.id = id;
     }
 
