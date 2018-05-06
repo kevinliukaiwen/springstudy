@@ -1,4 +1,4 @@
-package com.cims.domain.cars.impl;
+package com.cims.domain.cars;
 
 /**
  * @Author kwliu

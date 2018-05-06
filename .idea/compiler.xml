@@ -11,7 +11,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springstudy" target="1.5" />
-      <module name="springstudydi" target="1.6" />
+      <module name="springstudyaop" target="1.5" />
+      <module name="springstudydi" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
