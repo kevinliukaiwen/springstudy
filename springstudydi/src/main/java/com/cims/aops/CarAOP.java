@@ -15,6 +15,7 @@ import org.springframework.stereotype.Component;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 
 /**
  * @Author kwliu
@@ -45,8 +46,12 @@ public class CarAOP {
     public void beforeBMW(JoinPoint jp) {
         MethodSignature signature = (MethodSignature)jp.getSignature();
         Method method = signature.getMethod();
-        CarAction action = method.getAnnotation(CarAction.class);
-        String name = action.name();
-        System.out.println("注解上的名字：" + name);
+//        CarAction action = method.getAnnotation(CarAction.class);
+//        String name = action.name();
+//        System.out.println("注解上的名字：" + name);
+        System.out.println("目标方法名为：" + method.getName());
+        System.out.println("目标方法所属类的简单类名：" + signature.getDeclaringType().getSimpleName());
+        System.out.println("目标方法所属的类名：" + signature.getDeclaringTypeName());
+        System.out.println("目标方法声明类型" + Modifier.toString(signature.getModifiers()));
     }
 }

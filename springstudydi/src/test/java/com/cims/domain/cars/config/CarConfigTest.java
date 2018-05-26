@@ -29,7 +29,8 @@ public class CarConfigTest {
     private Car audi;
 
     @Autowired
-    private BMW bmw;
+    @Qualifier("BMW")
+    private Car bmw;
 
     @Test
     public void testCarAOP() {

@@ -14,11 +14,12 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Scope("prototype")
-public class BMW  {
+public class BMW implements Car  {
     /**
      * 返回宝马名称
      * @return String
      */
+    @Override
     @CarAction(name="这是宝马")
     public String getCarname() {
         return "BMW";
