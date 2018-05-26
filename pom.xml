@@ -10,7 +10,7 @@
     <version>1.0.0</version>
     <modules>
         <module>springstudydi</module>
-        <module>springstudyaop</module>
+        <module>springbootstudy</module>
     </modules>
     <dependencies>
         <!-- spring的核心容器有以下几个包-->

@@ -32,8 +32,5 @@ public class Audi implements Car {
         this.id = id;
     }
 
-    @Autowired
-    private void testAutowired() {
-        System.out.println("这是" + id);
-    }
+
 }

@@ -2,6 +2,7 @@ package com.cims.domain.cars.config;
 
 import com.cims.domain.cars.Car;
 import com.cims.domain.cars.impl.Audi;
+import com.cims.domain.cars.impl.BMW;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,14 +26,16 @@ public class CarConfigTest {
 //    ApplicationContext applicationContext = new AnnotationConfigApplicationContext(CarConfig.class);
     @Autowired
     @Qualifier("audi")
-    private Car car;
+    private Car audi;
+
+    @Autowired
+    private BMW bmw;
 
     @Test
-    public void testCarNotNull() {
-        Assert.assertNotNull(car);
+    public void testCarAOP() {
+        audi.getCarname();
+        bmw.getCarname();
+
     }
-    @Test
-    public void testCarConfig() {
-        Assert.assertEquals("我的id是:audiproperty",car.getCarname());
-    }
+
 }

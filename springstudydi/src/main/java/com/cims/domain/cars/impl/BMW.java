@@ -1,7 +1,9 @@
 package com.cims.domain.cars.impl;
 
+import com.cims.Annotations.CarAction;
 import com.cims.domain.cars.Car;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,12 +13,13 @@ import org.springframework.stereotype.Component;
  * @Modified
  */
 @Component
-public class BMW implements Car {
+@Scope("prototype")
+public class BMW  {
     /**
      * 返回宝马名称
      * @return String
      */
-    @Override
+    @CarAction(name="这是宝马")
     public String getCarname() {
         return "BMW";
     }
